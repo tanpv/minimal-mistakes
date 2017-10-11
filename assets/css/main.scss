@@ -4,21 +4,6 @@
 
 @charset "utf-8";
 
-
-.archive__item-title {
-	color: green;
-}
-
-.page__title {
-    color: green;
-    margin-top: 0;
-    line-height: 1;
-}
-
-.page__title {
-	font-size: $type-size-5;
-}
-
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
