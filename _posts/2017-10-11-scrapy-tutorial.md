@@ -20,6 +20,17 @@ This tutorial show up step by step how to using Scrapy frame work to scrape all 
 
 ### Create a new scrapy project
 
+```powershell
+scrapy startproject 
+```
+
+```py
+for i in l:
+	print i
+```
+
+
+
 ### Create a new spider
 
 ### Understand scrapy project structure
