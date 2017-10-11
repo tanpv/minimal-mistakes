@@ -1,5 +1,6 @@
 ---
 title: "Complete scrapy tutorial : scrape craigslist site"
+read_time: false
 excerpt_separator: "<!--more-->"
 categories:
   - Post Formats
