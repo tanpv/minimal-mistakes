@@ -1,5 +1,5 @@
 ---
-title: "Complete scrapy tutorial : scrape craigslist site"
+title: "Complete scrapy tutorial : scrape jobs at craigslist"
 read_time: false
 excerpt_separator: "<!--more-->"
 categories:

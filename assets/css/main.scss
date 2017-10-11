@@ -7,7 +7,6 @@
 
 .archive__item-title {
 	color: green;
-	font-weight: normal
 }
 
 .page__title {
@@ -17,8 +16,7 @@
 }
 
 .page__title {
-	font-size: $type-size-5;
-	font-weight: normal
+	font-size: $type-size-6;
 }
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
