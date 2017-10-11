@@ -8,5 +8,11 @@
 @import "minimal-mistakes"; // main partials
 
 .archive__item-title {
-	color:red;
+	color: green;
+}
+
+.page__title {
+    color: green;
+    margin-top: 0;
+    line-height: 1;
 }
