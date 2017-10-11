@@ -84,7 +84,7 @@ analytics:
 # Site Author
 author:
   name             : "Tan Pham"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.jpg"
   bio              : ""
   location         : "VN"
   email            :
