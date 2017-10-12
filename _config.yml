@@ -85,7 +85,7 @@ analytics:
 author:
   name             : "Tan Pham"
   avatar           : "assets/images/bio-photo.jpg"
-  bio              : "My work on data engineer: data scraping, data analysis, big data and machine learning"
+  bio              : "My work on data scraping, data analysis, big data and machine learning"
   location         : "Hanoi - VN"
   email            :
   uri              :
