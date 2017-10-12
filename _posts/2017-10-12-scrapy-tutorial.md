@@ -1,16 +1,13 @@
 ---
 title: "Complete scrapy tutorial : scrape jobs from craigslist"
 categories:
-  - test
+  - web scraping
 excerpt_separator: "<!--more-->"
 ---
 
-<!--more-->
-
-### Mission
-
 This tutorial show up step by step how to using Scrapy frame work to scrape all software job which listed in craigslist.com at sfbay. And then store this data to csv or json file.
 
+<!--more-->
 
 
 ### Create a new scrapy project
