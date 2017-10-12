@@ -36,3 +36,7 @@ main.scss
 .page__title {
 	font-size: $type-size-5
 }
+
+.page__title {
+	font-size: 25px
+}
