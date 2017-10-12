@@ -1,13 +1,10 @@
 ---
 title: "Complete scrapy tutorial : scrape jobs from craigslist"
 read_time: false
+
 excerpt_separator: "<!--more-->"
 categories:
-  - Post Formats
-tags:
-  - Post Formats
-  - readability
-  - standard
+  - Web Scraping
 ---
 
 <!--more-->

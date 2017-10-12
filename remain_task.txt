@@ -1,0 +1,38 @@
+
+- comment system --> https://mmistakes.github.io/minimal-mistakes/docs/configuration/
+
+
+- category and tags
+--->
+---
+layout: post
+title: Use Tags and Categories in your Jekyll based Github Pages
+category: Dev
+tags: [web, jekyll]
+---
+
+
+- navigation menu 
+---> https://mmistakes.github.io/minimal-mistakes/docs/navigation/
+
+
+- create sell page
+- create contact page
+
+
+- replace the css
+--->
+main.scss
+.archive__item-title {
+	color: green
+}
+
+.page__title {
+    color: green;
+    margin-top: 0;
+    line-height: 1;
+}
+
+.page__title {
+	font-size: $type-size-5
+}
