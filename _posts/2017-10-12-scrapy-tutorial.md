@@ -2,9 +2,11 @@
 title: "Complete scrapy tutorial : scrape jobs from craigslist"
 read_time: false
 comments: true
-excerpt_separator: "<!--more-->"
 categories:
   - Web Scraping
+tags:
+  - Web Scraping
+excerpt_separator: "<!--more-->"
 ---
 
 <!--more-->
