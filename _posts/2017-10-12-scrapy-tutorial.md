@@ -1,7 +1,7 @@
 ---
 title: "Complete scrapy tutorial : scrape jobs from craigslist"
 categories:
-  - scraping
+  - test
 excerpt_separator: "<!--more-->"
 ---
 
