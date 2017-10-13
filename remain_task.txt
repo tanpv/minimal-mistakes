@@ -1,6 +1,8 @@
 - head image
 - analytic
 - long, complete, best in the kind
+- type of topic 
+
 
 
 
