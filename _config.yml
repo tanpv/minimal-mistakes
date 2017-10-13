@@ -248,6 +248,6 @@ defaults:
       layout: single
       author_profile: false
       read_time: false
-      comments: false
+      comments: true
       share: true
       related: true
