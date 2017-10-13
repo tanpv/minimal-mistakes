@@ -1,3 +1,44 @@
+- head image
+- analytic
+- long, complete, best in the kind
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- add image --> https://mmistakes.github.io/minimal-mistakes/docs/layouts/
 
 - comment system --> https://mmistakes.github.io/minimal-mistakes/docs/configuration/
 
