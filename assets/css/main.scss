@@ -6,27 +6,6 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-.archive__item-title {
-    color: #1D9E48;
-}
-
-.page__title {
-	
-    color: #1D9E48;
-}
-
-.site-title
-{
-	 color: #1D9E48;
-}
-
-.greedy-nav {
-	color: #1D9E48;	
-}
-
-.greedy-nav a { color: #1D9E48; }
-
-
-.masthead__menu { 
-  color: red;
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
 }
