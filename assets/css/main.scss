@@ -3,11 +3,6 @@
 ---
 
 @charset "utf-8";
-
-
-
-
-
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
@@ -30,3 +25,8 @@
 }
 
 .greedy-nav a { color: #1D9E48; }
+
+
+.masthead__menu { 
+  color: red;
+}
