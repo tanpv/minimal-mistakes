@@ -5,6 +5,8 @@ categories:
 excerpt_separator: "<!--more-->"
 ---
 
+
+
 This tutorial show up step by step how to using Scrapy frame work to scrape all software job which listed in craigslist.com at sfbay. And then store this data to csv or json file.
 
 <!--more-->
