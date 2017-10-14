@@ -5,6 +5,12 @@
 @charset "utf-8";
 
 
+
+
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
 .archive__item-title {
     color: #1D9E48;
 }
@@ -18,8 +24,3 @@
 {
 	 color: #1D9E48;
 }
-
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
-
