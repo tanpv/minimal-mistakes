@@ -9,10 +9,10 @@ minimal_mistakes_skin    : "contrast" # "air", "contrast", "dark", "dirt", "mint
 
 # Site Settings
 locale                   : "en"
-title                    : "Data Engineer"
+title                    : # ""
 title_separator          : "-"
 name                     : "Tan Pham"
-description              : "Data Engineer."
+description              : "Every things around data."
 url                      : https://tanpham.org # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "tanpv/minimal-mistakes" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -55,7 +55,7 @@ analytics:
 author:
   name             : "Tan Pham"
   avatar           : "assets/images/bio-photo.jpg"
-  bio              : "My work on data ..."
+  bio              : "Online Teacher"
   location         : "Hanoi - VN"
   email            :
   uri              :

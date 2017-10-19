@@ -103,7 +103,7 @@ Note: Using tab for auto complete and auto suggestion.
 scrapy startproject craigslist
 ```
 
-#### Scrapy project structure
+#### 
 
 
 
@@ -114,10 +114,15 @@ cd craigslist
 scrapy genspider software_jobs_sfbay craigslist.org
 ```
 
-#### Spider structure
-
 
 
 ### Running spider
 
+```shell
+scrapy crawl software_jobs_sfbay
+```
+
+
+
 ### Export scrape result to csv / json
+
