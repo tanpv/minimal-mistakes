@@ -1,5 +1,5 @@
 ---
-title: "Complete scrapy tutorial : scrape jobs from craigslist"
+title: "Complete scrapy tutorial with reddit"
 categories:
   - web scraping
 excerpt_separator: "<!--more-->"
@@ -10,7 +10,7 @@ The advantage of using a framework like Scrapy to scrape data is it do a lot of 
 <!--more-->
 
 
-{% include toc %}
+<!-- {% include toc %} -->
 
 
 ### Target 1 : scrape titles, links, score in one page
