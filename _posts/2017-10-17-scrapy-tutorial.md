@@ -1,8 +1,17 @@
+---
+title: "Complete scrapy tutorial : scrape jobs from craigslist"
+categories:
+  - web scraping
+excerpt_separator: "<!--more-->"
+---
+
 The advantage of using a framework like Scrapy to scrape data is it do a lot of thing for you. 
 
+<!--more-->
 
 
-[TOC]
+{% include toc %}
+
 
 ### Target 1 : scrape titles, links, score in one page
 
