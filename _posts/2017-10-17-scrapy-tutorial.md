@@ -11,8 +11,8 @@ The advantage of using a framework like Scrapy to scrape data is it do a lot of 
 
 <!--more-->
 
-[Target 1 : scrape titles, links, score in one page](#Target 1 : scrape titles, links, score in one page)
-[Shell command : understanding how to extract data](#Shell command : understanding how to extract data)
+- [Target 1 : scrape titles, links, score in one page](#Target 1 : scrape titles, links, score in one page)
+- [Shell command : understanding how to extract data](#Shell command : understanding how to extract data)
 
 
 
