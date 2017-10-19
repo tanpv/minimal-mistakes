@@ -53,9 +53,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Tan Pham"
+  name             : "Tan Pham - Build with Love"
   avatar           : "assets/images/bio-photo.jpg"
-  bio              : "Build with Love"
+  bio              : #"Build with Love"
   location         : #"Hanoi - VN"
   email            :
   uri              :
