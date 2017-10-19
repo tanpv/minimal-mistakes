@@ -1,5 +1,5 @@
 ---
-title: "Complete scrapy tutorial with reddit"
+title: "Complete scrapy tutorial : scrape data from reddit"
 categories:
   - web scraping
 excerpt_separator: "<!--more-->"
