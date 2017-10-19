@@ -14,7 +14,7 @@ excerpt_separator: "<!--more-->"
 
 ### Part 1 : scrape titles, links, score in one page
 
-Scrape all title and link from Reddit funny topics which listed at https://www.reddit.com/r/funny/
+Scrape all title and link from Reddit funny topics which listed at [https://www.reddit.com/r/funny/](https://www.reddit.com/r/funny/)
 
 For this beginning we only scrape data from just one page.
 
