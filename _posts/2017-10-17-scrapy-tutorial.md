@@ -6,18 +6,13 @@ excerpt_separator: "<!--more-->"
 ---
 
 
-The advantage of using a framework like Scrapy to scrape data is it do a lot of thing for you. Your job is make frame work understand what do you want ?
-
+*The advantage of using a framework like Scrapy is it do a lot of thing for you. Your main job is understanding how Scrapy work and make it know what do you want.*
 
 <!--more-->
 
-- [Target 1 : scrape titles, links, score in one page](#Target 1 : scrape titles, links, score in one page)
-- [Shell command : understanding how to extract data](#Shell command : understanding how to extract data)
 
 
-
-
-### Target 1 : scrape titles, links, score in one page
+### Part 1 : scrape titles, links, score in one page
 
 Scrape all title and link from Reddit funny topics which listed at https://www.reddit.com/r/funny/
 
@@ -32,8 +27,6 @@ This session explain how to use Scrapy shell command to manually finding and tes
 ```shell
 scrapy shell
 ```
-
-
 
 
 
@@ -61,7 +54,7 @@ This session explain way to store scraped data to database
 
 
 
-### Target 2 : scrape all pages
+### Part 2 : scrape all pages
 
 Scrape title and link from all pages which start from https://www.reddit.com/r/funny/
 
@@ -73,7 +66,7 @@ This session explain how to use Rules and Link Extractor to specify way to follo
 
 
 
-### Target 3 : scrape thumbs images
+### Part 3 : scrape thumbs images
 
 Scrape title, link and image from all pages which start from https://www.reddit.com/r/funny/
 
