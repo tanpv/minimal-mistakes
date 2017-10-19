@@ -1,5 +1,18 @@
-The advantage of using a framework like Scrapy to scrape data is it do a lot of thing for you. 
+---
+title: "Complete scrapy tutorial : scrape data from reddit"
+categories:
+  - web scraping
+excerpt_separator: "<!--more-->"
+---
 
+
+The advantage of using a framework like Scrapy to scrape data is it do a lot of thing for you. Your job is make frame work understand what do you want ?
+
+
+<!--more-->
+
+[Target 1 : scrape titles, links, score in one page](#Target 1 : scrape titles, links, score in one page)
+[Shell command : understanding how to extract data](#Shell command : understanding how to extract data)
 
 
 
