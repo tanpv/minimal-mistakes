@@ -79,6 +79,3 @@ This session explain how to configure image pipeline to download save image to l
 ### Review it all with architecture
 
 Let look back at Scrapy architecture and understand it all.
-
-
-
