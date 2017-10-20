@@ -9,19 +9,8 @@ $link-color: green;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
-	color: green;
-}
+
 
 .page__content p, .page__content li, .page__content dl {
 	font-size: 16px;
-}
-
-.site-title {
-	color: green;
-}
-
-.greedy-nav a {
-	color: green;
 }
