@@ -17,7 +17,7 @@ excerpt_separator: "<!--more-->"
 
 One of my favorite place on Reddit is funny image, you could access at  [https://www.reddit.com/r/funny/](https://www.reddit.com/r/funny/) . First part of this tutorial will explain how to scrape the link, title and score from above link.
 
-![2017-10-20_21-31-44](..\assets\images\2017-10-20_21-31-44.jpg)
+![2017-10-20_21-31-44](\assets\images\2017-10-20_21-31-44.jpg)
 
 
 

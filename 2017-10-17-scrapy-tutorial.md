@@ -1,26 +1,29 @@
-The advantage of using a framework like Scrapy to scrape data is it do a lot of thing for you. 
+---
+title: "Complete scrapy tutorial : scrape data from reddit"
+categories:
+  - web scraping
+  - scrapy
+excerpt_separator: "<!--more-->"
+---
+
+
+*The advantage of using a framework like Scrapy is it do a lot of thing for you. Your main job is understanding how Scrapy work and make it know what do you want.*
+
+<!--more-->
 
 
 
+### Part 1 : scrape titles, links, score in one page
 
+One of my favorite place on Reddit is funny image, you could access at  [https://www.reddit.com/r/funny/](https://www.reddit.com/r/funny/) . First part of this tutorial will explain how to scrape the link, title and score from above link.
 
-### Target 1 : scrape titles, links, score in one page
-
-Scrape all title and link from Reddit funny topics which listed at https://www.reddit.com/r/funny/
-
-For this beginning we only scrape data from just one page.
+![2017-10-20_21-31-44](\assets\images\2017-10-20_21-31-44.jpg)
 
 
 
 ### Shell command : understanding how to extract data 
 
-This session explain how to use Scrapy shell command to manually finding and testing the way to extract data.
-
-```shell
-scrapy shell
-```
-
-
+`scrapy shell` 
 
 
 
@@ -48,7 +51,7 @@ This session explain way to store scraped data to database
 
 
 
-### Target 2 : scrape all pages
+### Part 2 : scrape all pages
 
 Scrape title and link from all pages which start from https://www.reddit.com/r/funny/
 
@@ -60,7 +63,7 @@ This session explain how to use Rules and Link Extractor to specify way to follo
 
 
 
-### Target 3 : scrape thumbs images
+### Part 3 : scrape thumbs images
 
 Scrape title, link and image from all pages which start from https://www.reddit.com/r/funny/
 
@@ -75,6 +78,3 @@ This session explain how to configure image pipeline to download save image to l
 ### Review it all with architecture
 
 Let look back at Scrapy architecture and understand it all.
-
-
-
