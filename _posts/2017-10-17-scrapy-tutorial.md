@@ -2,6 +2,7 @@
 title: "Complete scrapy tutorial : scrape data from reddit"
 categories:
   - web scraping
+  - scrapy
 excerpt_separator: "<!--more-->"
 ---
 
@@ -14,17 +15,15 @@ excerpt_separator: "<!--more-->"
 
 ### Part 1 : scrape titles, links, score in one page
 
-Scrape all title and link from Reddit funny topics which listed at https://www.reddit.com/r/funny/](https://www.reddit.com/r/funny/) .For this beginning we only scrape data from just one page.
+One of my favorite place on Reddit is funny image, you could access at  [https://www.reddit.com/r/funny/](https://www.reddit.com/r/funny/) . First part of this tutorial will explain how to scrape the link, title and score from above link.
+
+![2017-10-20_21-31-44](2017-10-20_21-31-44.jpg)
 
 
 
 ### Shell command : understanding how to extract data 
 
-This session explain how to use Scrapy shell command to manually finding and testing the way to extract data.
-
-```shell
-scrapy shell
-```
+`scrapy shell` 
 
 
 
