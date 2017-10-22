@@ -20,11 +20,25 @@ One of my favorite place on Reddit is funny image, you could access at  [https:/
 
 
 
-
-
 ## Shell command : understanding how to extract data 
 
-`scrapy shell` 
+### Start the shell
+
+Scrapy framework include a very handy tool called `shell    `  . With `shell` you could try to fetch url, then try to extract data base on response return from Scrapy. To access `shell` , from command prompt typing in `scrapy shell` , now the shell ready to accept your commands.
+
+![2017-10-22_23-06-43](/assets\images\2017-10-22_23-06-43.jpg)
+
+### Fetch url
+
+Typing in `fetch('https://www.reddit.com/r/funny/')` . After execute above command, a object call `response` is created, `response` object represent result of command `fetch` , so it contain all data from above Reddit url.
+
+### `Response`  object
+
+- From `shell` typing in `view(response)` , a local HTML page is show up from local. Allow us visually know what contain in the page.
+- From `shell` typing in `response.url` , this command will show up original url.
+- From `shell` typing in `response.text` , this command showup whole HTML source code for this page.
+
+### Extract data from `Response` object
 
 
 
