@@ -18,13 +18,11 @@ excerpt_separator: "<!--more-->"
 
 One of my favorite place on Reddit is funny image, you could access at  [https://www.reddit.com/r/funny/](https://www.reddit.com/r/funny/) . First part of this tutorial will explain how to scrape the link, title and score from above link.
 
-
-
 ## Shell command : understanding how to extract data 
 
 ### Start the shell
 
-Scrapy framework include a very handy tool called `shell    `  . With `shell` you could try to fetch url, then try to extract data base on response return from Scrapy. To access `shell` , from command prompt typing in `scrapy shell` , now the shell ready to accept your commands.
+Scrapy framework include a very handy tool called `shell    `  . With `shell` you could try to fetch url, then try to extract data from `response` object. To access `shell` , from command prompt typing in `scrapy shell` , now the shell ready to accept your commands.
 
 ![2017-10-22_23-06-43](/assets\images\2017-10-22_23-06-43.jpg)
 
@@ -39,6 +37,12 @@ Typing in `fetch('https://www.reddit.com/r/funny/')` . After execute above comma
 - From `shell` typing in `response.text` , this command showup whole HTML source code for this page.
 
 ### Extract data from `Response` object
+
+The main thing we need to tell to Scrapy is how to extract data from `response` object. Have 2 way to extract data, using `css selector` or `xpath` . In this tutorial we will use `css selector`. 
+
+From Chrome browser, open url  https://www.reddit.com/r/funny/ , move your mouse above one of title , right click and select `inspect` 
+
+
 
 
 
