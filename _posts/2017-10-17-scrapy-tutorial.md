@@ -1,7 +1,6 @@
 ---
 title: "Complete scrapy tutorial : scrape data from reddit"
 categories:
-  - web scraping
   - scrapy
 excerpt_separator: "<!--more-->"
 ---
