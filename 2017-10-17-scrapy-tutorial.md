@@ -18,13 +18,13 @@ excerpt_separator: "<!--more-->"
 
 One of my favorite place on Reddit is funny image, you could access at  [https://www.reddit.com/r/funny/](https://www.reddit.com/r/funny/) . First part of this tutorial will explain how to scrape the link, title and score from above link.
 
+
+
 ## Shell commands : understanding how to extract data 
 
 Scrapy framework include a very handy tool called `shell    `  . With `shell` you could try to fetch url, then try to extract data from `response` object. To access `shell` , from command prompt typing in `scrapy shell` , now the shell ready to accept your commands.
 
 ![2017-10-22_23-06-43](/assets\images\2017-10-22_23-06-43.jpg)
-
-
 
 Typing following command then enter
 
@@ -35,12 +35,8 @@ fetch('https://www.reddit.com/r/funny/')
 After execute above command, a object call `response` is created, `response` object represent result of command `fetch` , so it contain all data from above Reddit url. After have `response` object, we could show up some information as below:
 
 - Typing in `view(response)` , a local HTML page is show up on browser, allow us visually know what contain in the page.
-
 - Typing in `response.url` , this command will show up original url.
-
 - Typing in `response.text` , this command show up whole HTML source code for this page.
-
-  ​
 
 The main thing we need to tell to Scrapy is how to extract data from `response` object. Have 2 way to extract data, using `css selector` or `xpath` . In this tutorial we will use `css selector`. 
 
@@ -52,8 +48,6 @@ From inspection tool, we see that we need to care about all `a` tag which has cs
 
 ![2017-10-23_20-51-57](/assets\images\2017-10-23_20-51-57.jpg)
 
-
-
 Type following command then enter :
 
 ```shell
@@ -62,7 +56,7 @@ response.css("a.title").extract()
 
 This command extract all `a` tags which has class `title` .
 
-![2017-10-23_21-00-09](C:\site\minimal-mistakes\assets\images\2017-10-23_21-00-09.jpg)
+![2017-10-23_21-00-09](/assets\images\2017-10-23_21-00-09.jpg)
 
 We want text title, so typing following command then enter
 
@@ -86,7 +80,7 @@ All links will be extracted
 
 Related to score, let's do another inspection by move mouse to above score, right click and then select `inspect` . We found that we need to find `div` tag with class `score unvoted` .
 
-![2017-10-23_21-13-04](C:\site\minimal-mistakes\assets\images\2017-10-23_21-13-04.jpg)
+![2017-10-23_21-13-04](/assets\images\2017-10-23_21-13-04.jpg)
 
 Let's try to extract all score by following command
 
@@ -98,25 +92,21 @@ Following result return
 
 ![2017-10-23_21-16-33](/assets\images\2017-10-23_21-16-33.jpg)
 
-
-
 That it, now let summary useful thing we can do with Scrapy shell:
 
-- `fetch('url')` fetch url, Scrapy will return `response` object which contain all information.
+- ***fetch('url')***  fetch url, Scrapy will return `response` object which contain all information.
 
 
-- `view(response)` view local web page on browser
+- ***view(response)*** view local web page on browser
 
 
-- `response.url` will return original url which using on fetch command
+- ***response.url*** will return original url which using on fetch command
 
 
-- `response.text` will return all HTML source code
+- ***response.text*** will return all HTML source code
 
 
-- `response.css('css selector').extract()`  will filter HTML source code based on css selector then extract wanted information
-
-  ​
+- ***response.css('css selector').extract()***  will filter HTML source code based on css selector then extract wanted information
 
 ## Spider : define where to start and how to extract
 
