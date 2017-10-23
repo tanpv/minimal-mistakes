@@ -18,29 +18,105 @@ excerpt_separator: "<!--more-->"
 
 One of my favorite place on Reddit is funny image, you could access at  [https://www.reddit.com/r/funny/](https://www.reddit.com/r/funny/) . First part of this tutorial will explain how to scrape the link, title and score from above link.
 
+## Shell commands : understanding how to extract data 
 
-
-## Shell command : understanding how to extract data 
-
-### Start the shell
-
-Scrapy framework include a very handy tool called `shell    `  . With `shell` you could try to fetch url, then try to extract data base on response return from Scrapy. To access `shell` , from command prompt typing in `scrapy shell` , now the shell ready to accept your commands.
+Scrapy framework include a very handy tool called `shell    `  . With `shell` you could try to fetch url, then try to extract data from `response` object. To access `shell` , from command prompt typing in `scrapy shell` , now the shell ready to accept your commands.
 
 ![2017-10-22_23-06-43](/assets\images\2017-10-22_23-06-43.jpg)
 
-### Fetch url
-
-Typing in `fetch('https://www.reddit.com/r/funny/')` . After execute above command, a object call `response` is created, `response` object represent result of command `fetch` , so it contain all data from above Reddit url.
-
-### `Response`  object
-
-- From `shell` typing in `view(response)` , a local HTML page is show up from local. Allow us visually know what contain in the page.
-- From `shell` typing in `response.url` , this command will show up original url.
-- From `shell` typing in `response.text` , this command showup whole HTML source code for this page.
-
-### Extract data from `Response` object
 
 
+Typing following command then enter
+
+```shell
+fetch('https://www.reddit.com/r/funny/')
+```
+
+After execute above command, a object call `response` is created, `response` object represent result of command `fetch` , so it contain all data from above Reddit url. After have `response` object, we could show up some information as below:
+
+- Typing in `view(response)` , a local HTML page is show up on browser, allow us visually know what contain in the page.
+
+- Typing in `response.url` , this command will show up original url.
+
+- Typing in `response.text` , this command show up whole HTML source code for this page.
+
+  ​
+
+The main thing we need to tell to Scrapy is how to extract data from `response` object. Have 2 way to extract data, using `css selector` or `xpath` . In this tutorial we will use `css selector`. 
+
+From Chrome browser, open url  https://www.reddit.com/r/funny/ , move your mouse above one of title , right click and select `inspect` 
+
+![2017-10-22_23-55-13](/assets\images\2017-10-22_23-55-13.jpg)
+
+From inspection tool, we see that we need to care about all `a` tag which has css class call `title` 
+
+![2017-10-23_20-51-57](/assets\images\2017-10-23_20-51-57.jpg)
+
+
+
+Type following command then enter :
+
+```shell
+response.css("a.title").extract()
+```
+
+This command extract all `a` tags which has class `title` .
+
+![2017-10-23_21-00-09](C:\site\minimal-mistakes\assets\images\2017-10-23_21-00-09.jpg)
+
+We want text title, so typing following command then enter
+
+```sh     
+response.css("a.title::text").extract()
+```
+
+This command will extract all wanted title text as show below
+
+![2017-10-23_21-06-19](/assets\images\2017-10-23_21-06-19.jpg)
+
+To extract the link title, from inspection tool, we need to get value of attribute name `href` 
+
+```shell
+response.css("a.title::attr(href)").extract()
+```
+
+All links will be extracted
+
+![2017-10-23_21-10-14](/assets\images\2017-10-23_21-10-14.jpg)
+
+Related to score, let's do another inspection by move mouse to above score, right click and then select `inspect` . We found that we need to find `div` tag with class `score unvoted` .
+
+![2017-10-23_21-13-04](C:\site\minimal-mistakes\assets\images\2017-10-23_21-13-04.jpg)
+
+Let's try to extract all score by following command
+
+```shell
+response.css("div.score.unvoted::attr(title)").extract()
+```
+
+Following result return
+
+![2017-10-23_21-16-33](/assets\images\2017-10-23_21-16-33.jpg)
+
+
+
+That it, now let summary useful thing we can do with Scrapy shell:
+
+- `fetch('url')` fetch url, Scrapy will return `response` object which contain all information.
+
+
+- `view(response)` view local web page on browser
+
+
+- `response.url` will return original url which using on fetch command
+
+
+- `response.text` will return all HTML source code
+
+
+- `response.css('css selector').extract()`  will filter HTML source code based on css selector then extract wanted information
+
+  ​
 
 ## Spider : define where to start and how to extract
 
@@ -93,3 +169,19 @@ This session explain how to configure image pipeline to download save image to l
 ## Review it all with architecture
 
 Let look back at Scrapy architecture and understand it all.
+
+
+
+## Resources 
+
+| Resource     | Link                                     |
+| :----------- | :--------------------------------------- |
+| CSS selector | https://www.w3schools.com/cssref/css_selectors.asp |
+|              |                                          |
+|              |                                          |
+|              |                                          |
+|              |                                          |
+|              |                                          |
+
+
+
