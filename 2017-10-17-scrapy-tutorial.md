@@ -18,7 +18,7 @@ One of my favorite on Reddit is funny image page, you could access at  [https://
 
 
 
-## Shell commands : understanding web page 
+## Shell : understanding the page 
 
 Scrapy framework include a very handy tool called `shell    `  . With `shell` you could try to fetch url, then try to extract data from `response` object. To access `shell` , from command prompt typing in `scrapy shell` , now the shell ready to accept your commands.
 
@@ -116,7 +116,7 @@ This session explain how to make Scrapy understand where to start and how to ext
 
 
 
-## Item : what data to extract
+## Item : define what to extract
 
 This session explain how to make Scrapy understand what to extract.
 
@@ -140,7 +140,7 @@ Scrape title and link from all pages which start from https://www.reddit.com/r/f
 
 
 
-## Spider : extend method to specify how to extract
+## Spider : improve method to specify how to extract
 
 This session explain how to use Rules and Link Extractor to specify way to follow links
 
