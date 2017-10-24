@@ -52,7 +52,7 @@ Type following command then enter :
 response.css("a.title").extract()
 ```
 
-This command extract all `a` tags which has class `title` .
+This command using css selector to extract all `a` tags which has class `title` .
 
 ![2017-10-23_21-00-09](/assets\images\2017-10-23_21-00-09.jpg)
 
