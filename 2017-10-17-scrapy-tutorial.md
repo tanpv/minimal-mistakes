@@ -10,17 +10,15 @@ excerpt_separator: "<!--more-->"
 
 <!--more-->
 
-
-
 ## Part 1 : scrape titles, links, score in one page
 
 ![2017-10-20_21-31-44](/assets\images\2017-10-20_21-31-44.jpg)
 
-One of my favorite place on Reddit is funny image, you could access at  [https://www.reddit.com/r/funny/](https://www.reddit.com/r/funny/) . First part of this tutorial will explain how to scrape the link, title and score from above link.
+One of my favorite on Reddit is funny image page, you could access at  [https://www.reddit.com/r/funny/](https://www.reddit.com/r/funny/) . First part of this tutorial will explain how to scrape the link, title and score from above link.
 
 
 
-## Shell commands : understanding how to extract data 
+## Shell commands : understanding web page 
 
 Scrapy framework include a very handy tool called `shell    `  . With `shell` you could try to fetch url, then try to extract data from `response` object. To access `shell` , from command prompt typing in `scrapy shell` , now the shell ready to accept your commands.
 
@@ -40,7 +38,7 @@ After execute above command, a object call `response` is created, `response` obj
 
 The main thing we need to tell to Scrapy is how to extract data from `response` object. Have 2 way to extract data, using `css selector` or `xpath` . In this tutorial we will use `css selector`. 
 
-From Chrome browser, open url  https://www.reddit.com/r/funny/ , move your mouse above one of title , right click and select `inspect` 
+From Chrome browser, open url  [https://www.reddit.com/r/funny/](https://www.reddit.com/r/funny/) , move your mouse above one of title , right click and select `inspect` 
 
 ![2017-10-22_23-55-13](/assets\images\2017-10-22_23-55-13.jpg)
 
@@ -92,9 +90,9 @@ Following result return
 
 ![2017-10-23_21-16-33](/assets\images\2017-10-23_21-16-33.jpg)
 
-That it, now let summary useful thing we can do with Scrapy shell:
+This understanding of how to extract data will be completely applied when we create Scrapy project. Now let summary useful thing we can do with shell:
 
-- ***fetch('url')***  fetch url, Scrapy will return `response` object which contain all information.
+- ***fetch('url')***  will return `response` object which contain all information.
 
 
 - ***view(response)*** view local web page on browser
@@ -103,24 +101,28 @@ That it, now let summary useful thing we can do with Scrapy shell:
 - ***response.url*** will return original url which using on fetch command
 
 
-- ***response.text*** will return all HTML source code
+- ***response.text*** will return entire HTML source code from page
 
 
-- ***response.css('css selector').extract()***  will filter HTML source code based on css selector then extract wanted information
+- ***response.css('').extract()***  will filter HTML source code based on css selector then extract wanted information
+  - *'css_selector::**text**'* will return text of extracted tags
+  - *'css_selector::**attr**(attribute_name)'* will return value of attribute_name
 
-## Spider : define where to start and how to extract
+
+
+## Spider : where to start and how to extract
 
 This session explain how to make Scrapy understand where to start and how to extract data.
 
 
 
-## Item : define what data to extract
+## Item : what data to extract
 
 This session explain how to make Scrapy understand what to extract.
 
 
 
-## Crawl command : store data to json, csv, xml file
+## Crawl : store data to json, csv, xml file
 
 This session explain way to store scraped data to data file.
 
