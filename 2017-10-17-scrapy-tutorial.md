@@ -6,7 +6,7 @@ excerpt_separator: "<!--more-->"
 ---
 
 
-*The advantage of using a framework like Scrapy is it do a lot of thing for you. Your main job is understanding how Scrapy work and make it know what do you want.*
+*Step by step explain with real example how to scraping web data with Scrapy*
 
 <!--more-->
 
@@ -189,9 +189,7 @@ Now let back to command prompt and start the reddit_job spider with command
 scrapy crawl reddit_job
 ```
 
-You will see our data is extract and print out to console as 3 list. So, seem spider extraction working fine.
-
-![2017-10-25_21-51-18](/assets\images\2017-10-25_21-51-18.jpg)
+You will see our data is extract and print out to console as 3 list. So, spider extraction working fine.
 
 
 
@@ -275,11 +273,21 @@ File with name `out_data.csv` is created and contain our data like magical.
 
 ![2017-10-25_22-43-38](/assets\images\2017-10-25_22-43-38.jpg)
 
+It is very similar if you want export data to json or xml file
+
+```shell
+scrapy crawl reddit_job -o out_data.json -t json
+```
+
+```shell
+scrapy crawl reddit_job -o out_data.xml -t xml
+```
+
 
 
 ## Item Pipeline : filter with score value
 
-This session explain way to store scraped data to database
+
 
 
 
