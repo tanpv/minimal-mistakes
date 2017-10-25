@@ -52,7 +52,7 @@ Type following command then enter :
 response.css("a.title").extract()
 ```
 
-This command extract all `a` tags which has class `title` .
+This command using css selector to extract all `a` tags which has class `title` .
 
 ![2017-10-23_21-00-09](/assets\images\2017-10-23_21-00-09.jpg)
 
@@ -112,23 +112,172 @@ This understanding of how to extract data will be completely applied when we cre
 
 ## Spider : where to start and how to extract
 
-This session explain how to make Scrapy understand where to start and how to extract data.
+Now, it time to create new Scrapy project. From command prompt, enter command and enter
+
+```shell
+scrapy startproject reddit
+```
+
+A new project folder name **reddit** will be automatically created with following structure
+
+![2017-10-25_20-25-00](/assets\images\2017-10-25_20-25-00.jpg)
+
+
+
+Now change current directory to **reddit** then create a new `spider` . You need to pass on spider name and the domain, in this case is reddit.com
+
+```shell
+cd reddit
+scrapy genspider reddit_job reddit.com
+```
+
+A new file call **reddit_job.py** will be created inside spider folder with following content
+
+```python
+# -*- coding: utf-8 -*-
+import scrapy
+
+class RedditJobSpider(scrapy.Spider):
+    name = 'reddit_job'
+    allowed_domains = ['reddit.com']
+    start_urls = ['http://reddit.com/']
+
+    def parse(self, response):
+        pass
+```
+
+ 
+
+Let explain what inside this spider file
+
+- `name` is the name of spider, this name will be used when we want to run this spider
+
+
+- `allowed_domains` spider will only crawl file in this list of domain
+
+
+- `start_urls` starting point so spider start crawling, let edit the `start_urls` to https://www.reddit.com/r/funny/
+
+- `parse` function, this function will parse the response which return automatically from crawl result.
+
+  We will use selector which already tried successfully with `shell` in this function to extract data.
+
+Let try to change `parse` function as following code
+
+```python
+# -*- coding: utf-8 -*-
+import scrapy
+
+
+class RedditJobSpider(scrapy.Spider):
+    
+    name = 'reddit_job'
+    allowed_domains = ['reddit.com']
+
+    # we start from funny title
+    start_urls = ['https://www.reddit.com/r/funny/']
+
+    def parse(self, response):
+        print response.css("a.title::text").extract()
+        print response.css("a.title::attr(href)").extract()
+        print response.css("div.score.unvoted::attr(title)").extract()
+```
+
+Now let back to command prompt and start the reddit_job spider with command
+
+```shell
+scrapy crawl reddit_job
+```
+
+You will see our data is extract and print out to console as 3 list. So, seem spider extraction working fine.
+
+![2017-10-25_21-51-18](/assets\images\2017-10-25_21-51-18.jpg)
 
 
 
 ## Item : define what to extract
 
-This session explain how to make Scrapy understand what to extract.
+`items.py` will be place where you specify what data you want. Each data item will be a `Field` object.
+
+Let change file `items.py` with following content
+
+```python
+# -*- coding: utf-8 -*-
+
+# Define here the models for your scraped items
+#
+# See documentation in:
+# http://doc.scrapy.org/en/latest/topics/items.html
+
+import scrapy
+
+class RedditItem(scrapy.Item):
+    title = scrapy.Field()
+    url = scrapy.Field()
+    score = scrapy.Field()
+```
+
+Now let change spider `parse` function a little bit correspond to item we just created. The point is `parse` function will `yield` out items, each item will contain data we want to extract.
+
+```python
+# -*- coding: utf-8 -*-
+import scrapy
+# Import so parse could understand RedditItem define structure
+from reddit.items import RedditItem
+
+class RedditJobSpider(scrapy.Spider):
+    
+    name = 'reddit_job'
+    allowed_domains = ['reddit.com']
+
+    # we start from funny title
+    start_urls = ['https://www.reddit.com/r/funny/']
+
+    def parse(self, response):
+        titles = response.css("a.title::text").extract()
+        hrefs = response.css("a.title::attr(href)").extract()
+        scores = response.css("div.score.unvoted::attr(title)").extract()
+
+        for item in zip(titles, hrefs, scores):
+
+        	new_item = RedditItem()
+        	
+        	new_item['title'] = item[0]
+        	new_item['url'] = item[1]
+        	new_item['score'] = item[2]
+            
+        	yield new_item
+```
+
+
+
+Now let's run the crawl command again
+
+```shell
+scrapy crawl reddit_job
+```
+
+Console will print out data items as expected. That it, we just create a fully functional Scrapy project.
+
+![2017-10-25_22-30-58](/assets\images\2017-10-25_22-30-58.jpg)
 
 
 
 ## Crawl : store data to json, csv, xml file
 
-This session explain way to store scraped data to data file.
+For almost Scrapy project,  after be extracted data will be saved to database or file. To save data to csv file, let execute crawl command as below
+
+```shell
+scrapy crawl reddit_job -o out_data.csv -t csv
+```
+
+File with name `out_data.csv` is created and contain our data like magical.
+
+![2017-10-25_22-43-38](/assets\images\2017-10-25_22-43-38.jpg)
 
 
 
-## Item Pipeline : filter with score
+## Item Pipeline : filter with score value
 
 This session explain way to store scraped data to database
 

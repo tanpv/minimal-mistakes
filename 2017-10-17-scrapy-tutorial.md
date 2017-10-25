@@ -183,7 +183,7 @@ class RedditJobSpider(scrapy.Spider):
         print response.css("div.score.unvoted::attr(title)").extract()
 ```
 
-Now let back to command prompt and start the reddit_job spider with following command
+Now let back to command prompt and start the reddit_job spider with command
 
 ```shell
 scrapy crawl reddit_job
