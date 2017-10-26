@@ -328,7 +328,7 @@ From the console you will see drop message for data which have score < = 10000
 
 ![2017-10-26_7-58-11](/assets\images\2017-10-26_7-58-11.jpg)
 
-In in the csv file, you will only see the data item which score > 10000
+In csv file, you will only see the data item which score > 10000
 
 ![2017-10-26_8-06-25](/assets\images\2017-10-26_8-06-25.jpg)
 
