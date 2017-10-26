@@ -336,15 +336,85 @@ In csv file, you will only see the data item which score > 10000
 
 ## Part 2 : scrape all pages
 
-Scrape title and link from all pages which start from https://www.reddit.com/r/funny/
+From beginning of this tutorial until now we only got data from one page https://www.reddit.com/r/funny/
+
+but if you open this url by browser, you will see that still remain a lot more fun when you click to **Next** button at end of page. In this session I will show you how to scrape from all page.
+
+![2017-10-26_20-02-51](/assets\images\2017-10-26_20-02-51.jpg)
+
+Now let do some inspection about this **Next** button.
+
+![2017-10-26_20-45-35](/assets\images\2017-10-26_20-45-35.jpg)
+
+Open the `shell` and try with followings command
+
+Fetch the url
+
+```shell
+fetch('https://www.reddit.com/r/funny/')
+```
+
+Select for `span` with class `next-button` .
+
+```shell
+response.css(".next-button")
+```
+
+Select for `a` tag inside next button and extract the link
+
+```shell
+response.css(".next-button").css("a::attr(href)").extract()[0]
+```
+
+Will return the link to the next page, that is what we want
+
+![2017-10-26_21-11-49](/assets\images\2017-10-26_21-11-49.jpg)
 
 
 
-## Spider : improve method to specify how to extract
+## Recursive spider : change parse function
 
-This session explain how to use Rules and Link Extractor to specify way to follow links
+From above session, we already know how to get the link to next page, we will need modify the `parse` function inside `spider` also. The main point is extract next page url and then make a `Request` with callback to `parse` function.
 
+```python
+# -*- coding: utf-8 -*-
+import scrapy
+from reddit.items import RedditItem
+from scrapy.http.request import Request
 
+class RedditJobSpider(scrapy.Spider):
+    
+    name = 'reddit_job'
+    allowed_domains = ['reddit.com']
+
+    # we start from funny title
+    start_urls = ['https://www.reddit.com/r/funny/']
+
+    def parse(self, response):
+
+        # extract data from raw response
+        titles = response.css("a.title::text").extract()
+        hrefs = response.css("a.title::attr(href)").extract()
+        scores = response.css("div.score.unvoted::attr(title)").extract()
+
+        for item in zip(titles, hrefs, scores):
+
+        	new_item = RedditItem()
+        	
+        	new_item['title'] = item[0]
+        	new_item['url'] = item[1]
+        	new_item['score'] = item[2]
+        	
+        	yield new_item
+
+        # extract link for next page
+        next_page = response.css(".next-button").css("a::attr(href)").extract()[0]
+
+        # make request and make this parse become recursive
+        yield Request(url=next_page, callback=self.parse)
+```
+
+That it, now try to run spider, you will see `Spider` run page to page seem never stop. Have another technical to scrape in multiple page which use `Rule` and `LinkExtractor ` , but we will talk about this later.
 
 ## Part 3 : scrape thumbs images
 
@@ -358,7 +428,7 @@ This session explain how to configure image pipeline to download save image to l
 
 
 
-## Review it all with architecture
+## Review it all again
 
 Let look back at Scrapy architecture and understand it all.
 
