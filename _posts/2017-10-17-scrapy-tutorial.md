@@ -287,7 +287,50 @@ scrapy crawl reddit_job -o out_data.xml -t xml
 
 ## Item Pipeline : filter with score value
 
+Some time after extracting data (after  `yield` in `parse`  function) you want to do some extra processing before data go to data base or file. Some kind of extra processing : remove duplicate, add to database. In this session I will show you how to filter data base on score value. Mean if the score is below a value, I will drop data, so the data not go in to csv file.
 
+To do this Scrapy provide object call `ITEM_PIPELINES` . Have 2 steps to enable and apply `ITEM_PIPELINES`. First, from reddit project folder , open the file `settings.py` then uncomment `ITEM_PIPELINES` part.
+
+```python
+ITEM_PIPELINES = {
+   'reddit.pipelines.RedditPipeline': 300,
+}
+```
+
+Second, from project folder, open the file `pipelines.py` , in this file you will modify function `process_item` to add your logic you want. In this function, I  will drop the data item if score value below 10000.
+
+```python
+# -*- coding: utf-8 -*-
+
+# Define your item pipelines here
+#
+# Don't forget to add your pipeline to the ITEM_PIPELINES setting
+# See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
+
+from scrapy.exceptions import DropItem
+
+class RedditPipeline(object):
+    def process_item(self, item, spider):
+    	if int(item['score']) > 10000:
+        	return item
+        else:
+        	raise DropItem("too low score")
+
+```
+
+Now let try crawl command
+
+```python
+scrapy crawl reddit_job -o out_data_filter.csv -t csv
+```
+
+From the console you will see drop message for data which have score < = 10000
+
+![2017-10-26_7-58-11](/assets\images\2017-10-26_7-58-11.jpg)
+
+In in the csv file, you will only see the data item which score > 10000
+
+![2017-10-26_8-06-25](/assets\images\2017-10-26_8-06-25.jpg)
 
 
 
