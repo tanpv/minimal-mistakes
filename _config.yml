@@ -31,7 +31,7 @@ naver-site-verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : &twitter "TanPhamV"
 facebook:
   username               :
   app_id                 :
