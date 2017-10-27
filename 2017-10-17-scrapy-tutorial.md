@@ -10,7 +10,7 @@ excerpt_separator: "<!--more-->"
 
 <!--more-->
 
-## Part 1 : scrape titles, links, score in one page
+## Milestone 1 : scrape titles, links, score in one page
 
 ![2017-10-20_21-31-44](/assets\images\2017-10-20_21-31-44.jpg)
 
@@ -334,7 +334,7 @@ In csv file, you will only see the data item which score > 10000
 
 
 
-## Part 2 : scrape all pages
+## Milestone 2 : scrape all pages with recursive spider
 
 From beginning of this tutorial until now we only got data from one page https://www.reddit.com/r/funny/
 
@@ -414,36 +414,16 @@ class RedditJobSpider(scrapy.Spider):
         yield Request(url=next_page, callback=self.parse)
 ```
 
-That it, now try to run spider, you will see `Spider` run page to page seem never stop. Have another technical to scrape in multiple page which use `Rule` and `LinkExtractor ` , but we will talk about this later.
-
-## Part 3 : scrape thumbs images
-
-Scrape title, link and image from all pages which start from https://www.reddit.com/r/funny/
-
-
-
-## Image Pipeline : download image
-
-This session explain how to configure image pipeline to download save image to local.
-
-
-
-## Review it all again
-
-Let look back at Scrapy architecture and understand it all.
+That it, now try to run spider, you will see `Spider` run page to page seem never stop. Have another technical to scrape in multiple page which use `Rule` and `LinkExtractor ` , but we will talk about this in another post.
 
 
 
 ## Resources 
 
 | Resource     | Link                                     |
-| :----------- | :--------------------------------------- |
+| ------------ | :--------------------------------------- |
 | CSS selector | https://www.w3schools.com/cssref/css_selectors.asp |
-|              |                                          |
-|              |                                          |
-|              |                                          |
-|              |                                          |
-|              |                                          |
+| XPath        | https://www.w3schools.com/xml/xpath_intro.asp |
 
 
 
