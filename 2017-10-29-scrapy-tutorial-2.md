@@ -139,7 +139,7 @@ scrapy crawl book
 
 ![2017-10-30_0-22-13](/assets\images\2017-10-30_0-22-13.jpg)
 
-# Define Item
+# Define Scrape Data with Item
 
 # 2 level parsing
 
@@ -147,5 +147,5 @@ scrapy crawl book
 
 # Scrape the Book Covers
 
-# Scrape Review Part
+
 
