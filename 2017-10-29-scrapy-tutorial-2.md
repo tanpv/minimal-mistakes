@@ -19,9 +19,9 @@ In this tutorial we will scape data from Amazon. Open link on browser [https://w
 The objective of this tutorial will be scrape following data item for each book and then save data to a csv file
 
 * Sell order
-
-
 * Book title
+
+
 * Author
 * Price
 * Cover image (Note that we will rename image with book name)
@@ -84,9 +84,9 @@ Return not just have detail link but also has product link, so we need to do fil
 
 ![2017-10-29_23-44-18](/assets\images\2017-10-29_23-44-18.jpg)
 
+That quite enough of start page understanding, let do project and spider.
 
-
-# Get Book Links
+# Get Detail Book Links
 
 Create a new project call **amazon**
 
@@ -94,9 +94,54 @@ Create a new project call **amazon**
 scrapy startproject amazon
 ```
 
+Change current directory to amazon folder and create `spider` call **book**
+
+```shell
+scrapy genspider book www.amazon.com
+```
+
+Let change `start_urls`  and `parse` function and you have some thing like this
+
+```python
+# -*- coding: utf-8 -*-
+import scrapy
 
 
+class BookSpider(scrapy.Spider):
+    
+    name = 'book'
+    allowed_domains = ['www.amazon.com']
+    start_urls = ['https://www.amazon.com/best-sellers-books-Amazon/zgbs/books']
 
+    def parse(self, response):
+        
+        # extract data from response
+        ranks = response.css("div.zg_itemImmersion").css("span.zg_rankNumber::text").extract()
+        links = response.css("div.zg_itemImmersion").css("a.a-link-normal::attr(href)").extract()
+        
+        detail_links = []
+        
+        # filter product reviews link
+        for link in links:
+        	if 'product-reviews' not in link:
+        		detail_links.append(link)
+
+        for item in zip(ranks, detail_links):
+	        print item[0]
+	        print item[1]
+```
+
+Now try to run this `spider` with `crawl` command and you will get rank and detail link print out
+
+```shell
+scrapy crawl book
+```
+
+![2017-10-30_0-22-13](/assets\images\2017-10-30_0-22-13.jpg)
+
+# Define Item
+
+# 2 level parsing
 
 # Scrape Book Title, Author, Intro
 
