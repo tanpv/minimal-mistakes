@@ -166,13 +166,60 @@ class AmazonItem(scrapy.Item):
 Back to spider file, from Amazon page structure. We see that, to get data we should have 2 levels of extraction.
 
 * First extraction happen at starting url, and we could extract `order` and `detail link`
-* From `detail link` , we continue to do another `request` , get the `response` and parse remain information : title, author, price, summary and cover image by another function.
+* From `detail link` , we continue to do another `request` , get the `response` and parse remain information : title, author, price, summary and cover image by another function call `parse_detail_info` 
 
 Now let change the `parse` function follow changing in file `items.py`
 
+```python
+# -*- coding: utf-8 -*-
+import scrapy
+# import the item
+from amazon.items import AmazonItem
 
+
+class BookSpider(scrapy.Spider):
+	
+	name = 'book'
+	allowed_domains = ['www.amazon.com']
+	start_urls = ['https://www.amazon.com/best-sellers-books-Amazon/zgbs/books']
+
+	def parse(self, response):
+		
+		# extract data from response
+		orders = response.css("div.zg_itemImmersion").css("span.zg_rankNumber::text").extract()
+		links = response.css("div.zg_itemImmersion").css("a.a-link-normal::attr(href)").extract()
+		
+		detail_links = []
+		
+		# filter product reviews out
+		for link in links:
+			if 'product-reviews' not in link:
+				detail_links.append('https://www.amazon.com/'+link)
+
+		# create data item
+		for item in zip(orders, detail_links):
+			# create a new item
+			new_item = AmazonItem()
+			new_item['order'] = item[0]
+
+			# # create a new request and get detail infor on parse detail
+			request = scrapy.Request(url=item[1], callback=self.parse_detail_info)
+
+			# transfer item to parse detail function
+			request.meta['item'] = new_item
+
+			yield request
+
+
+	def parse_detail_info(self, response):
+		item = response.meta['item']
+		print item['order']
+		print response.url
+```
 
 # Scrape Book Title, Author, Intro
+
+
 
 # Scrape the Book Covers
 
