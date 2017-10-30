@@ -1,5 +1,5 @@
 ---
-title: "Complete Scrapy Tutorial Part 2: Scrape Data from Amazon"
+title: "Scrapy Tutorial Part 2: Scrape Data from Amazon"
 categories:
   - scrapy
 excerpt_separator: "<!--more-->"

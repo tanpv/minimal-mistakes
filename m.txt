@@ -1,3 +1,9 @@
+class="a-link-normal"
+class="a-section a-spacing-mini"
+class="div.a-section.a-spacing-none.p13n-asin"
+zg_rankNumber
+a-link-normal
+response.css("div.zg_itemImmersion").css("span.zg_rankNumber")
 -------------------
 is it useful ?
 is it simple ?
