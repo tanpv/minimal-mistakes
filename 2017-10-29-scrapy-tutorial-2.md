@@ -20,8 +20,6 @@ The objective of this tutorial will be scrape following data item for each book 
 
 * Sell order
 * Book title
-
-
 * Author
 * Price
 * Cover image (Note that we will rename image with book name)
@@ -29,6 +27,8 @@ The objective of this tutorial will be scrape following data item for each book 
 
 
 # Understand starting page
+
+As every other scraping data project, first step should be about understand the page, how to extract it.
 
 Open the `shell` with command
 
@@ -141,7 +141,36 @@ scrapy crawl book
 
 # Define Scrape Data with Item
 
-# 2 level parsing
+It is time to define data structure which we want to archive inside file `items.py` . Change file `items.py` as follow:
+
+```python
+# -*- coding: utf-8 -*-
+
+# Define here the models for your scraped items
+#
+# See documentation in:
+# http://doc.scrapy.org/en/latest/topics/items.html
+
+import scrapy
+
+
+class AmazonItem(scrapy.Item):
+	order = scrapy.Field()
+	title = scrapy.Field()
+	author = scrapy.Field()
+	price = scrapy.Field() 
+```
+
+# Multiple Levels Parsing
+
+Back to spider file, from Amazon page structure. We see that, to get data we should have 2 levels of extraction.
+
+* First extraction happen at starting url, and we could extract `order` and `detail link`
+* From `detail link` , we continue to do another `request` , get the `response` and parse remain information : title, author, price, summary and cover image by another function.
+
+Now let change the `parse` function follow changing in file `items.py`
+
+
 
 # Scrape Book Title, Author, Intro
 

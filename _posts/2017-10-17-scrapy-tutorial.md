@@ -6,7 +6,7 @@ excerpt_separator: "<!--more-->"
 ---
 
 
-*Step by step explain with real example how to scraping web data with Scrapy*
+Step by step explain `shell` `spider` `item` `crawl	` , `item pipeline` and `recursive spider`	to travel between pages.
 
 <!--more-->
 

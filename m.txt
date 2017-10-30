@@ -1,9 +1,3 @@
-class="a-link-normal"
-class="a-section a-spacing-mini"
-class="div.a-section.a-spacing-none.p13n-asin"
-zg_rankNumber
-a-link-normal
-response.css("div.zg_itemImmersion").css("span.zg_rankNumber")
 -------------------
 is it useful ?
 is it simple ?
@@ -30,6 +24,9 @@ it is OK to be hide
 it is OK to be small
 it is OK to temp not fully working with what you love
 it is OK to go behind
+it is OK to do some thing with quite slow progress
+it is OK to not have 100% focus
+it is OK to slow down
 -------------------
 want calm in mind
 want mind strong
