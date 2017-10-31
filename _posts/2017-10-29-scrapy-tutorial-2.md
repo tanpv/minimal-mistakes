@@ -6,7 +6,7 @@ excerpt_separator: "<!--more-->"
 ---
 
 
-*Step by step explain with real example how to scraping web data with Scrapy*
+*Step by step explained `inspection tool` `multiple levels parsing` `image pipeline`*
 
 <!--more-->
 
@@ -21,7 +21,7 @@ The objective of this tutorial will be scrape following data item for each book 
 * Sell order
 * Book title
 * Author
-* Price
+* Book summary
 * Cover image (Note that we will rename image with book name)
 
 
@@ -158,7 +158,7 @@ class AmazonItem(scrapy.Item):
 	order = scrapy.Field()
 	title = scrapy.Field()
 	author = scrapy.Field()
-	price = scrapy.Field() 
+	summary = scrapy.Field() 
 ```
 
 # Multiple Levels Parsing
@@ -217,7 +217,44 @@ class BookSpider(scrapy.Spider):
 		print response.url
 ```
 
+Note that with Amazon you need to specify the user agent inside `settings.py` file
+
+```python
+# Need to have when want to crawl from Amazon
+USER_AGENT = 'amazon (+https://tanpham.org)'
+```
+
+Now start the crawl and you will see function `parse_detail_info` work as expected.
+
 # Scrape Book Title, Author, Intro
+
+Let's go back to `shell` to see how to scrape data from detail book page. Try with one detail book page.
+
+```
+scrapy shell
+```
+
+```
+fetch('https://www.amazon.com/Leonardo-Vinci-Walter-Isaacson/dp/1501139150/ref=zg_bs_books_1?_encoding=UTF8&psc=1&refRID=7TPBA5D9KY75PJ6S8YHT')
+```
+
+Now do some inspection with Chrome developer tool. First item is book title
+
+![2017-10-31_7-54-55](/assets\images\2017-10-31_7-54-55.jpg)
+
+For book title, we could extract by finding `span` tag with `id=productTitle`
+
+```
+response.css('span#productTitle::text').extract()
+```
+
+For author name
+
+```
+response.css('a.contributorNameID::text').extract()
+```
+
+ 
 
 
 
