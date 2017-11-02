@@ -6,7 +6,7 @@ excerpt_separator: "<!--more-->"
 ---
 
 
-*Step by step explained `inspection tool` `multiple levels parsing` `image pipeline`*
+*Step by step explained `inspection tool` `multiple levels parsing` 
 
 <!--more-->
 
@@ -21,8 +21,6 @@ The objective of this tutorial will be scrape following data item for each book 
 * Sell order
 * Book title
 * Author
-* Book summary
-* Cover image (Note that we will rename image with book name)
 
 
 
@@ -153,12 +151,10 @@ It is time to define data structure which we want to archive inside file `items.
 
 import scrapy
 
-
 class AmazonItem(scrapy.Item):
 	order = scrapy.Field()
 	title = scrapy.Field()
 	author = scrapy.Field()
-	summary = scrapy.Field() 
 ```
 
 # Multiple Levels Parsing
@@ -254,11 +250,37 @@ For author name
 response.css('a.contributorNameID::text').extract()
 ```
 
- 
+Now let modify the function `parse_detail_info` in file `book.py` so we will scrape book title and author name.
+
+```python
+def parse_detail_info(self, response):
+
+		item = response.meta['item']
+		item['title'] = response.css('span#productTitle::text').extract()
+		item['author'] = response.css('a.contributorNameID::text').extract()
+		
+		yield item
+
+```
 
 
 
-# Scrape the Book Covers
+That it, let try `crawl` command to see item printed out
 
+```shell
+cd amazon
+scrapy crawl book
+```
 
+![2017-11-02_20-22-45](/assets\images\2017-11-02_20-22-45.jpg)
+
+Let's save data to csv with command
+
+```shell
+scrapy crawl book -o out_data.csv -t csv
+```
+
+And we have data
+
+![2017-11-02_21-34-50](/assets\images\2017-11-02_21-34-50.jpg)
 
