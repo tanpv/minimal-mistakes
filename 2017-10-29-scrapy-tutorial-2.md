@@ -1,12 +1,12 @@
 ---
-title: "Scrapy Tutorial Part 2: Scrape Data from Amazon"
+title: "Scrapy Tutorial Part 2: Scrape Best Seller Book from Amazon"
 categories:
   - scrapy
 excerpt_separator: "<!--more-->"
 ---
 
 
-Step by step explained `inspection tool` `multiple levels parsing` 
+Step by step explain **inspection tool**, **multiple level parse function**.
 
 <!--more-->
 

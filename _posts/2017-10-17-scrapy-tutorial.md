@@ -1,12 +1,12 @@
 ---
-title: "Scrapy Tutorial Part 1 : Scrape Data from Reddit"
+title: "Scrapy Tutorial Part 1 : Scrape Funny Title from Reddit"
 categories:
   - scrapy
 excerpt_separator: "<!--more-->"
 ---
 
 
-Step by step explain `shell` `spider` `item` `crawl	` , `item pipeline` and `recursive spider`	to travel between pages.
+Introduce  **shell**,  **spider**,  **item**, **crawl**, **item pipeline** and  **recursive spider**.
 
 <!--more-->
 
