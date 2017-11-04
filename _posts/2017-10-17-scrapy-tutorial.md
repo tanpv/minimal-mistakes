@@ -6,7 +6,7 @@ excerpt_separator: "<!--more-->"
 ---
 
 
-Explain **shell**,  **spider**,  **item**, **crawl**, **item pipeline** and  **recursive spider**.
+Explain **shell**,  **spider**,  **item**, **crawl**, **item-pipeline** and  **recursive-spider**.
 
 <!--more-->
 
