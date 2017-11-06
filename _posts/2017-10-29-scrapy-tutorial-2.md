@@ -6,7 +6,7 @@ excerpt_separator: "<!--more-->"
 ---
 
 
-Explain **inspection**, **multiple level parse function**.
+Explain **Inspection Tool**, **Multiple Level Parse function**.
 
 <!--more-->
 

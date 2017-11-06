@@ -6,7 +6,7 @@ excerpt_separator: "<!--more-->"
 ---
 
 
-Explain **CrawlSpider**, **LinkExtractor**, **Rule**, **ImagePipeline** page
+Explain **CrawlSpider**, **LinkExtractor**, **Rule**, **ImagePipeline**
 
 <!--more-->
 
@@ -94,7 +94,7 @@ Now let's explain what going on in this file:
 
 * `CrawlSpider` : Scrapy provide 2 kind of spider
   *  `Spider` is basic one, with this kind of spider we need to care about how to move from page to page by our self
-  * `CrawlSpider` provide a mechanism to follow links automatically. Our remain job is specify what kind of link we want to follow. We will use `Rule` and `LinkExtractor` classes for this task
+  *  `CrawlSpider` provide a mechanism to follow links automatically. Our remain job is specify what kind of link we want to follow. We will use `Rule` and `LinkExtractor` classes for this task
 * `Rule` : specify following information:
   * `LinkExtractor` specify what kind of link we want engine to make request. All links are requested need to filtered by regular expression specify by `allow` parameter. In this case, we only do request on link which has `photo/` inside
   * `callback` specify function which handle response. In this case is `parse_item` function. We will put parse logic to this function to extract all information we want, in this case is the downloadable image url.
