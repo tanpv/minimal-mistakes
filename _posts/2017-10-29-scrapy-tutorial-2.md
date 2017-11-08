@@ -1,5 +1,5 @@
 ---
-title: "Scrapy Tutorial Part 2: Best Seller Book from Amazon"
+title: "Scrapy Part 2 : Scrape Best Seller Book on Amazon"
 categories:
   - scrapy
 excerpt_separator: "<!--more-->"

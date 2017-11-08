@@ -1,12 +1,12 @@
 ---
-title: "Scrapy Tutorial Part 4: Games Data from Steam"
+title: "Scrapy Part 5 : Collect Home Data from AirBnB"
 categories:
   - scrapy
 excerpt_separator: "<!--more-->"
 ---
 
 
-Explain **LinkExtractor**, **Paging** and **Form Request**.
+Explain how to get data from javascript, dynamic site like AirBnB.
 
 <!--more-->
 

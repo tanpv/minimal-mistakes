@@ -1,5 +1,5 @@
 ---
-title: "Scrapy Tutorial Part 4: Games Data from Steam"
+title: "Scrapy Part 4: Get Games Data from Steam"
 categories:
   - scrapy
 excerpt_separator: "<!--more-->"

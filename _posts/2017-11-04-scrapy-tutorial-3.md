@@ -1,5 +1,5 @@
 ---
-title: "Scrapy Tutorial Part 3: Nature Image from Pexels"
+title: "Scrapy Part 3: Collect Nature Image on Pexels"
 categories:
   - scrapy
 excerpt_separator: "<!--more-->"

@@ -1,5 +1,5 @@
 ---
-title: "Scrapy Tutorial Part 1: Funny Title from Reddit"
+title: "Scrapy Part 1: Get Funny Title from Reddit"
 categories:
   - scrapy
 excerpt_separator: "<!--more-->"
