@@ -52,7 +52,7 @@ Let try to see the HTML source which inside `response`  by command, seem nothing
 view(response)
 ```
 
-![2017-11-11_15-55-32](C:\site\minimal-mistakes\assets\images\2017-11-11_15-55-32.jpg)
+![2017-11-11_15-55-32](/assets\images\2017-11-11_15-55-32.jpg)
 
 So how to deal with this kind of site ?
 
