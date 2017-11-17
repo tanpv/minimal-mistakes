@@ -72,9 +72,28 @@ https://www.reddit.com/r/funny/?count=50&after=t3_7dey2i
 
 
 
-# Selecting Data Methods
+# Select Url with Regular Expression
+
+The first important question is how to feed Scrapy with right collection of URL ?. So Scrapy will help you crawl HTML from that pages.
+
+Scrapy using Regular Expression to filter out urls (You will see this in detail next parts). For examples, we want Scrapy crawl following urls
+
+```shell
+https://www.reddit.com/r/funny/
+https://www.reddit.com/r/funny/?count=25&after=t3_7d8adu
+https://www.reddit.com/r/funny/?count=50&after=t3_7dey2i
+...
+```
+
+What regular expression could filter out theses urls. Let try to find out this in real time with [https://regexr.com/](https://regexr.com/) 
+
+![2017-11-17_8-02-20](/assets\images\2017-11-17_8-02-20.jpg)
 
 
 
-# Selecting Url Methods
+# Select HTML Tags with CSS and Xpath
+
+
+
+# 
 
