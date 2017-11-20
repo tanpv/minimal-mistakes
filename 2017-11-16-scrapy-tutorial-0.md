@@ -10,6 +10,8 @@ Explain core skill need to prepare before using Scrapy : **regular expression, c
 
 <!--more-->
 
+[![2017-11-20_23-24-52](/assets\images\2017-11-20_23-24-52.jpg)](http://google.com)
+
 # The Big Picture
 
 ![2017-11-16_21-55-27](/assets\images\2017-11-16_21-55-27.jpg)
