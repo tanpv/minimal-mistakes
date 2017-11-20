@@ -103,7 +103,7 @@ Let explain some thing about this regular expression and you will understand how
 
 ![2017-11-20_9-45-45](/assets\images\2017-11-20_9-45-45.jpg)
 
-For more detail and practice on regular expression, please access this site https://regexone.com/
+For more detail and practice on regular expression, please access this site [https://regexone.com/](https://regexone.com/)
 
 # Select HTML Tags with CSS Selector
 
