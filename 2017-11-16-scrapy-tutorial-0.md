@@ -1,5 +1,5 @@
 ---
-title: "Scrapy Part 0 : Scrapy the Big Picture and Fundamental"
+title: "Scrapy Part 0 : The Big Picture"
 categories:
   - scrapy
 excerpt_separator: "<!--more-->"
