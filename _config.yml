@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "contrast" # "air", "contrast", "dark", "dirt", "mint
 
 # Site Settings
 locale                   : "en"
-title                    : "Data Engineer"
+title                    : "Make Data Engineer Simple"
 title_separator          : "-"
 name                     : "Tan Pham"
 description              : "Scraping data, Spark, Haddop, Kafka ..."
