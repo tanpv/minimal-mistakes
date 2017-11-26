@@ -5,8 +5,9 @@ categories:
 excerpt_separator: "<!--more-->"
 ---
 
+[https://tanpham.org](https://tanpham.org)
 
-Explain how to get data from javascript, dynamic site like AirBnB.
+Explain how to get data from **javascript, dynamic** site like AirBnB.
 
 <!--more-->
 

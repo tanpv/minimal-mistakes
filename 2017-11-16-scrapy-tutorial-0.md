@@ -5,12 +5,13 @@ categories:
 excerpt_separator: "<!--more-->"
 ---
 
+[https://tanpham.org](https://tanpham.org)
 
 Explain core skill need to prepare before using Scrapy : **regular expression, css selector**.
 
-<!--more-->
 
-[![2017-11-20_23-24-52](/assets\images\2017-11-20_23-24-52.jpg)](http://google.com)
+
+<!--more-->
 
 # The Big Picture
 
@@ -126,3 +127,7 @@ For example, to search for `a` tag with class `title` , we put in following css 
 That is how css selector work. To make more clear and detail about css selector, please refer to link 
 
 https://www.w3schools.com/cssref/css_selectors.asp
+
+
+
+[![2017-11-20_23-24-52](/assets\images\2017-11-20_23-24-52.jpg)](https://tan-pham.thinkific.com)

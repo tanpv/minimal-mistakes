@@ -5,10 +5,13 @@ categories:
 excerpt_separator: "<!--more-->"
 ---
 
+[https://tanpham.org](https://tanpham.org)
 
 Explain **CrawlSpider**, **LinkExtractor**, **Rule**, **ImagePipeline**
 
 <!--more-->
+
+
 
 # The Objective
 

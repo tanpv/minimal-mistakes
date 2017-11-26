@@ -5,10 +5,13 @@ categories:
 excerpt_separator: "<!--more-->"
 ---
 
+[https://tanpham.org](https://tanpham.org)
 
 Explain **Inspection Tool**, **Multiple Level Parse function**.
 
 <!--more-->
+
+
 
 # The Objective
 

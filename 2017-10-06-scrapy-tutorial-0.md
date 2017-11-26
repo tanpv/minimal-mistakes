@@ -5,10 +5,13 @@ categories:
 excerpt_separator: "<!--more-->"
 ---
 
+[https://tanpham.org](https://tanpham.org)
 
 Explain core skill need to prepare before using Scrapy : **regular expression, css selector**.
 
 <!--more-->
+
+
 
 # The Big Picture
 
