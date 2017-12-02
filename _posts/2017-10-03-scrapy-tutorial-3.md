@@ -5,6 +5,7 @@ categories:
 excerpt_separator: "<!--more-->"
 ---
 
+[![2017-11-20_23-24-52](/assets\images\2017-11-20_23-24-52.jpg)](https://courses.tanpham.org/courses/scrapy-bootcamp-scraping-data-from-internet)
 
 Explain **CrawlSpider**, **LinkExtractor**, **Rule**, **ImagePipeline**
 
