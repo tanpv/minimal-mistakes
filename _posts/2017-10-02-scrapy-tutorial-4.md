@@ -267,3 +267,8 @@ That it, let modify our parse item, so we could get some data.
 ```
 
 That it, enjoy your steam data.
+
+
+
+[![2017-11-20_23-24-52](/assets\images\2017-11-20_23-24-52.jpg)](https://courses.tanpham.org/courses/scrapy-bootcamp-scraping-data-from-internet)
+

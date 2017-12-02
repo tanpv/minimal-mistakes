@@ -124,3 +124,10 @@ For example, to search for `a` tag with class `title` , we put in following css 
 That is how css selector work. To make more clear and detail about css selector, please refer to link 
 
 https://www.w3schools.com/cssref/css_selectors.asp
+
+
+
+
+
+[![2017-11-20_23-24-52](/assets\images\2017-11-20_23-24-52.jpg)](https://courses.tanpham.org/courses/scrapy-bootcamp-scraping-data-from-internet)
+

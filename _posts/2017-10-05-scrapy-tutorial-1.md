@@ -427,3 +427,7 @@ That it, now try to run spider, you will see `Spider` run page to page seem neve
 
 
 
+
+
+[![2017-11-20_23-24-52](/assets\images\2017-11-20_23-24-52.jpg)](https://courses.tanpham.org/courses/scrapy-bootcamp-scraping-data-from-internet)
+

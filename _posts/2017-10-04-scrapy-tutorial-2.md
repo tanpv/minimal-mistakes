@@ -284,3 +284,11 @@ And we have data
 
 ![2017-11-02_21-34-50](/assets\images\2017-11-02_21-34-50.jpg)
 
+
+
+
+
+
+
+[![2017-11-20_23-24-52](/assets\images\2017-11-20_23-24-52.jpg)](https://courses.tanpham.org/courses/scrapy-bootcamp-scraping-data-from-internet)
+
