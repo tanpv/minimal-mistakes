@@ -10,5 +10,7 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+  - title: "My Courses"
+    url: https://courses.tanpham.org/
   - title: "Scrapy"
     url: /categories/#scrapy
