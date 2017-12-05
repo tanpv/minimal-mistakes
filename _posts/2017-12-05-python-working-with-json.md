@@ -5,6 +5,10 @@ categories:
 excerpt_separator: "<!--more-->"
 ---
 
+Explain JSON format and how to working with JSON in Python.
+
+<!--more-->
+
 # What is JSON ?
 
 JSON is data format for sharing data. It is readable lightweight and is good replace for XML. Following is  JSON data example.
