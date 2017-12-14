@@ -42,13 +42,12 @@ excerpt_separator: "<!--more-->"
 
 ## IOS, SWIFT, GAME DEVELOPMENT
 
-
+* <a href="https://click.linksynergy.com/deeplink?id=mEo*LYazi/o&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fios-11-app-development-bootcamp%2F" target="_blank">iOS 11 & Swift 4 - The Complete iOS App Development Bootcamp</a>
 * <a href="https://click.linksynergy.com/fs-bin/click?id=mEo*LYazi/o&subid=&offerid=323058.1&type=10&tmpid=14537&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdevslopes-ios10%2F%3Fpmtag%3DUDEMARCH" target="_blank">iOS 10 & Swift 3: From Beginner to Paid Professional</a>
 * <a href="https://click.linksynergy.com/fs-bin/click?id=mEo*LYazi/o&subid=&offerid=323058.1&type=10&tmpid=14537&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fhow-to-make-a-freaking-iphone-app-ios-10-swift-3-xcode-8%2F%3Fpmtag%3DUDEMARCH" target="_blank">How to Make a Freaking iPhone App - iOS 10 and Swift 3</a>
 * <a href="https://click.linksynergy.com/fs-bin/click?id=mEo*LYazi/o&subid=&offerid=323058.1&type=10&tmpid=14537&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-ios-10-developer-course%2F%3Fpmtag%3DUDEMARCH" target="_blank">The Complete iOS 10 Developer - Create Real Apps in Swift 3</a>
 * <a href="https://click.linksynergy.com/fs-bin/click?id=mEo*LYazi/o&subid=&offerid=323058.1&type=10&tmpid=14537&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fios9-swift%2F%3Fpmtag%3DUDEMARCH" target="_blank">iOS 9 and Swift 2: From Beginner to Paid Professional</a>
 * <a href="https://click.linksynergy.com/fs-bin/click?id=mEo*LYazi/o&subid=&offerid=323058.1&type=10&tmpid=14537&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fcomplete-ios-10-developer-course%2F%3Fpmtag%3DUDEMARCH" target="_blank">The Complete iOS 10 Developer Course - Build 21 Apps</a>
-
 
 
 ## WEB DEVELOPMENT
