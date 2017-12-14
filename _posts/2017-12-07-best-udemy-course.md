@@ -1,5 +1,5 @@
 ---
-title: "Collection of Best Udemy Courses Ever Created"
+title: "Best of Udemy Courses Ever Created"
 categories:
 excerpt_separator: "<!--more-->"
 ---
