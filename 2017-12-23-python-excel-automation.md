@@ -71,7 +71,7 @@ wb = openpyxl.load_workbook('500.xlsx')
 
 ## Access worksheet from workbook
 
-After load workbook, we could access current active worksheet with code. Default active worksheet is the first sheet.
+After load workbook, we could access current active worksheet with code. Only has one active worksheet at a time, and you could access data only from active worksheet. Default active worksheet is the first sheet.
 
 ```python
 # get current active worksheet
@@ -109,7 +109,7 @@ With MS Excel:
 * Column is named from by one or combine of many alphabet characters  A, B, C ...
 * Row is named with numbers 1, 2, 3 ...
 
-One cell could be accessed simply by specify column and row. And then actual data could be accessed with `value` property
+One cell could be accessed simply by specify column and row combination. And then actual data could be accessed with `value` property
 
 ```python
 # print out data at column A and row 2 of current worksheet
