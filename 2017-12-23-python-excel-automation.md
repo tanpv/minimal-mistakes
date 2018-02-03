@@ -109,7 +109,7 @@ With MS Excel:
 * Column is named from by one or combine of many alphabet characters  A, B, C ...
 * Row is named with numbers 1, 2, 3 ...
 
-One cell could be accessed simply by specify column and row combination. And then actual data could be accessed with `value` property
+One cell could be accessed simply specified by **combination column and row**. And then actual data could be accessed with `value` cell property.
 
 ```python
 # print out data at column A and row 2 of current worksheet
@@ -122,7 +122,7 @@ print(ws['A2'].value)
 
 ## Access one row, column from worksheet
 
-If we only specify just column, we could access all data inside that column
+If we only specify just column, we could access all cells inside that column
 
 ```python
 # print all data from column A (the first column)
@@ -130,15 +130,15 @@ for cell in ws['A']:
 	print(cell.value)
 ```
 
-If we only specify just row, we could access all data inside that row
+If we only specify just row, we could access all cells inside that row
 
 ```python
-# print all data from row 1
+# print all data from row 1, which are columns name
 for cell in ws['1']:
 	print(cell.value)
 ```
 
-## Access all rows, all columns from worksheet
+## Access all rows and columns from worksheet
 
 Incase we want to scan the whole sheet, `openpyl` provide property call `rows` and `columns`.
 
@@ -156,29 +156,53 @@ for column in ws.columns:
 
 ## Save workbook
 
-After doing modify data, to save workbook with name
+After doing modify data, to save workbook with name.
 
 ```python
 # save workbook with name
 wb.save("500.xlsx")
 ```
 
-# Part 2 : Create workbook and fill data from memory
+# Part 2 : Working with new xlsx file
 
-## Create a new workbook in memory
+## Create a new workbook
+
+To create  a new empty workbook. A workbook is always created with at least one worksheet.
+
+```python
+from openpyxl import Workbook
+# create a new workbook
+wb = Workbook()
+# get the default worksheet
+ws = wb.active
+# set worksheet title
+ws.title = "first sheet"
+```
 
 
 
-## Add worksheet
+## Add cell data
 
-## Add data
+Cell data is set by combination of column and row.
+
+```python
+# set value for first row as column name
+ws['A1']='first column'
+ws['B1']='second column'
+
+# set value for second row
+ws['A2']=1
+ws['B2']=2
+```
+
+
 
 ## Save workbook
 
-# Part 3 :  Add Filter, Set Sort, Add Chart, Set Styles
+```python
+wb.save('new_file.xlsx')
+```
 
-## Filter & sort
+# Bonus : Document Reference Link
 
-## Chart
-
-## Styles
+https://media.readthedocs.org/pdf/openpyxl/latest/openpyxl.pdf
