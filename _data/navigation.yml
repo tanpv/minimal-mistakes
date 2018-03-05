@@ -11,6 +11,7 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
   - title: "courses"
-    url: https://courses.tanpham.org/collections
+    # url: https://courses.tanpham.org/collections
+    url: https://tan-pham.thinkific.com/
   - title: "scrapy"
     url: /categories/#scrapy
