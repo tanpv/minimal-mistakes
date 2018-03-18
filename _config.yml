@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "contrast" # "air", "contrast", "dark", "dirt", "mint
 
 # Site Settings
 locale                   : "en"
-title                    : "blockchain engineer"
+title                    : "a full node"
 title_separator          : "-"
 name                     : "Tan Pham"
 description              : "blockchain enginner and development"
