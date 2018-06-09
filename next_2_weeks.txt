@@ -1,7 +1,0 @@
-topic in order
-- scrapy
-- beautifulsoup
-- twitter
-- numpy & pandas
-Apache Spark
-(SQL, Pandas, R)
